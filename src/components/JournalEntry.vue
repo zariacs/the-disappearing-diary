@@ -2,26 +2,26 @@
     <div class="moving-background">
         <div class="slider-container">
             <div class="slider-image"></div>
-            <!-- <img src="../assets/images/rocks.jpg" alt="Image 1">
-            <img src="../assets/images/rocks-mirrored.jpg" alt="Image 2"> -->
-        
-        <!-- <img src="../assets/images/rocks.jpg" alt=""> -->
             <div class="glass">
                 <header>
                     <h1 id="page-title">tempral</h1>
                 </header>
                 <div class="writing-section">
                     <div class="editing-tools"></div>
-                    <textarea class="text-box"></textarea>
+                    <textarea id="journal-text" class="text-box suggested" v-model="intro" v-on:click="includeSuggestedText"></textarea>
                 </div>
                 <aside>
                     <button>Destroy</button>
-                    <div class="moods aside-card">
+                    <div class="aside-card-container">
+                        <div class="moods aside-card">
                         <h2>Moods</h2>
+                        </div>
+                        <div class="aside-spacer"></div>
+                        <div class="involved aside-card">
+                            <h2></h2>
+                        </div>
                     </div>
-                    <div class="involved aside-card">
-                        <h2></h2>
-                    </div>
+                    
                 </aside>
             </div>
         </div>
@@ -161,7 +161,6 @@ header {
 
     /* border */
     border: 3px solid #ffafcc;
-    /* margin: 10px 10px 20px 0px; */
     /* end of border */
 }
 
@@ -170,6 +169,10 @@ header {
     background: linear-gradient(white, white) padding-box,
     linear-gradient(to right, #c8b6ff, #ffafcc) border-box;
     border: 4px solid transparent;
+}
+
+.suggested {
+    color: #a3a3a3;
 }
 
 /* -------END OF MAIN------- */
@@ -208,7 +211,8 @@ button {
 .aside-card {
     left: 0;
     width: 100%;
-    height: 30vh;
+    /* height: 30vh; */
+    height: 279px;
     font-family: sans-serif;
     box-sizing: border-box;
     padding-left: 1.5em;
@@ -222,14 +226,17 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.moods {
-    position: absolute;
-    top: 80px;
+.aside-card-container {
+    margin-top: 30px;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;    
 }
 
-.involved {
-    position: absolute;
-    top: 42vh;
+
+.aside-spacer {
+    height: 31px;   
 }
 
 h2 {
@@ -238,21 +245,15 @@ h2 {
 
 </style>
 
-<!-- <script setup>
-import { onMounted } from 'vue';
+<script setup>
+    import { ref } from 'vue'
 
-onMounted(() => {
-  const slider = document.getElementById("slider");
-  const images = slider.getElementsByTagName("img");
-  let currentIndex = 0;
+    const intro = ref("Dear Diary, \n\nThere's no sunshine when she's gone.")
 
-  setInterval(() => {
-    images[currentIndex].style.opacity = 0;
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].style.opacity = 1;
-  }, 2000);
-})
+    function includeSuggestedText() {
+        const textBox = document.getElementById("journal-text")
+        textBox.classList.remove("suggested")
+        intro.value = "Dear Diary, \n\n"
+    }
 
-
-
-</script> -->
+</script>
