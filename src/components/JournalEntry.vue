@@ -1,6 +1,11 @@
 <template>
     <div class="moving-background">
-        <img src="../assets/images/rocks.jpg" alt="">
+        <div class="slider-container">
+            <div class="slider-image"></div>
+            <!-- <img src="../assets/images/rocks.jpg" alt="Image 1">
+            <img src="../assets/images/rocks-mirrored.jpg" alt="Image 2"> -->
+        </div>
+        <!-- <img src="../assets/images/rocks.jpg" alt=""> -->
         <div class="glass">
             <header>
                 <h1>tempral.</h1>
@@ -58,6 +63,59 @@ body, html {
 }
 
 /* -------END OF BACKGROUND------- */
+
+/* -------BACKGROUND MOVEMENT------- */
+/* #slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#slider img {
+  width: 100%; 
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left is linear;
+}
+
+#slider img:first-child {
+  left: 0;
+}
+
+#slider img:last-child {
+  left: 99%;
+} */
+
+.slider-container {
+    overflow: hidden;
+    height: 100%;
+    width: 500%;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-150%); /* The image width */
+  }
+}
+
+.slider-image {
+  background: url("../assets/images/rocks.jpg") repeat-x;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  animation: slide 200s linear infinite;
+}
+
+
+
+/* -------END OF BACKGROUND MOVEMENT------- */
+
 
 
 header {
@@ -180,9 +238,23 @@ h2 {
     color: #4B4B4B;
 }
 
-
-
-
-
-
 </style>
+
+<!-- <script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  const slider = document.getElementById("slider");
+  const images = slider.getElementsByTagName("img");
+  let currentIndex = 0;
+
+  setInterval(() => {
+    images[currentIndex].style.opacity = 0;
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].style.opacity = 1;
+  }, 2000);
+})
+
+
+
+</script> -->
