@@ -112,7 +112,7 @@ header {
     left: 40px;
     width: 100%;
     height: 80px;
-    color: white;
+    color: #d2d5dd;
     font-family: sans-serif;
 }
 
@@ -240,7 +240,7 @@ aside {
 }
 
 .aside-spacer {
-    height: 25px;   
+    height: 30px;   
 }
 
 h2 {
@@ -251,7 +251,7 @@ h2 {
 
 /* -------SETTINGS TRAY------- */
 
-/* tray icons are this color: #f9d4bb */
+
 .settings-tray {
     margin-top: 17px;
     height: 100%;
@@ -267,10 +267,10 @@ h2 {
     width: 30px;
 }
 
+/* tray icons are this color: #f9d4bb */
 .settings-tray-icon > img {
     height: 100%;
     width: 100%;
-    /* object-fit:scale-down; */
 }
 
 
