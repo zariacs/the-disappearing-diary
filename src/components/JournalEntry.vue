@@ -8,7 +8,7 @@
         <!-- <img src="../assets/images/rocks.jpg" alt=""> -->
         <div class="glass">
             <header>
-                <h1>tempral.</h1>
+                <h1>tempral</h1>
             </header>
             <div class="writing-section">
                 <div class="editing-tools"></div>
