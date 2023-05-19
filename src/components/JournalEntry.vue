@@ -178,7 +178,22 @@ header {
     box-sizing: border-box;
     padding: 30px;
     resize: none;
+    font-size: 24px;
+    color: #4B4B4B;
     /* end of writing */
+
+    /* border */
+    border: 3px solid #ffafcc;
+    border-radius: 5px;
+    margin: 10px 10px 20px 0px;
+    /* end of border */
+}
+
+.text-box:focus {
+    outline: none;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #c8b6ff, #ffafcc) border-box;
+    border: 3px solid transparent;
 }
 
 /* -------ASIDE------- */
