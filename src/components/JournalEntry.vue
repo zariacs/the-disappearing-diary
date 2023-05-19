@@ -11,7 +11,9 @@
                     <textarea id="journal-text" class="text-box suggested" v-model="intro" v-on:click="includeSuggestedText"></textarea>
                 </div>
                 <aside>
-                    <button>Destroy</button>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                        <button id="destroy-button">Destroy</button>
+                    </a>
                     <div class="aside-card-container">
                         <div class="moods aside-card">
                         <h2>Moods</h2>
@@ -20,6 +22,12 @@
                         <div class="involved aside-card">
                             <h2></h2>
                         </div>
+                        <div class="settings-tray">
+                            <a class="settings-tray-icon"><img src="../assets/settings-tray-icons/settings-icon.png" alt=""></a>
+                            <a class="settings-tray-icon"><img src="../assets/settings-tray-icons/settings-icon.png" alt=""></a>
+                            <a class="settings-tray-icon"><img src="../assets/settings-tray-icons/settings-icon.png" alt=""></a>
+                        </div>
+                        
                     </div>
                     
                 </aside>
@@ -189,7 +197,7 @@ aside {
     font-family: sans-serif;
 }
 
-button {
+#destroy-button {
     /* structure */
     background-color: #EA638C;
     height: 50px;
@@ -207,12 +215,17 @@ button {
     /* end of text */
 }
 
+.aside-card-container {
+    margin-top: 30px;
+
+    /* flex */
+    display: flex;
+    flex-direction: column;    
+}
 
 .aside-card {
-    left: 0;
     width: 100%;
-    /* height: 30vh; */
-    height: 279px;
+    height: 280px;
     font-family: sans-serif;
     box-sizing: border-box;
     padding-left: 1.5em;
@@ -226,22 +239,42 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.aside-card-container {
-    margin-top: 30px;
-
-    /* flex */
-    display: flex;
-    flex-direction: column;    
-}
-
-
 .aside-spacer {
-    height: 31px;   
+    height: 25px;   
 }
 
 h2 {
     color: #4B4B4B;
 }
+
+/* -------END OF ASIDE------- */
+
+/* -------SETTINGS TRAY------- */
+
+/* tray icons are this color: #f9d4bb */
+.settings-tray {
+    margin-top: 17px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.settings-tray-icon {
+    height: 100%;
+    width: 30px;
+}
+
+.settings-tray-icon > img {
+    height: 100%;
+    width: 100%;
+    /* object-fit:scale-down; */
+}
+
+
+/* -------END OF SETTINGS TRAY------- */
 
 </style>
 
