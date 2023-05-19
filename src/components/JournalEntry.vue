@@ -4,25 +4,26 @@
             <div class="slider-image"></div>
             <!-- <img src="../assets/images/rocks.jpg" alt="Image 1">
             <img src="../assets/images/rocks-mirrored.jpg" alt="Image 2"> -->
-        </div>
+        
         <!-- <img src="../assets/images/rocks.jpg" alt=""> -->
-        <div class="glass">
-            <header>
-                <h1>tempral</h1>
-            </header>
-            <div class="writing-section">
-                <div class="editing-tools"></div>
-                <textarea class="text-box"></textarea>
+            <div class="glass">
+                <header>
+                    <h1>tempral</h1>
+                </header>
+                <div class="writing-section">
+                    <div class="editing-tools"></div>
+                    <textarea class="text-box"></textarea>
+                </div>
+                <aside>
+                    <button>Destroy</button>
+                    <div class="moods aside-card">
+                        <h2>Moods</h2>
+                    </div>
+                    <div class="involved aside-card">
+                        <h2></h2>
+                    </div>
+                </aside>
             </div>
-            <aside>
-                <button>Destroy</button>
-                <div class="moods aside-card">
-                    <h2>Moods</h2>
-                </div>
-                <div class="involved aside-card">
-                    <h2></h2>
-                </div>
-            </aside>
         </div>
     </div>
 </template>
@@ -31,9 +32,10 @@
 
 /* -------BACKGROUND------- */
 .moving-background {
-    background-color: #EABAF6;
+    /* background-color: #EABAF6; */
     height: 100vh;
     width: 100%;
+    background-image: url("../assets/images/rocks.jpg");
 }
 
 .moving-background > img {
@@ -91,8 +93,9 @@ body, html {
 
 .slider-container {
     overflow: hidden;
-    height: 100%;
-    width: 500%;
+    height: 100vh;
+    width: 900%;
+    margin: 0;
 }
 
 @keyframes slide {
@@ -110,6 +113,7 @@ body, html {
   width: 100%;
   object-fit: cover;
   animation: slide 200s linear infinite;
+  margin: 0;
 }
 
 
