@@ -8,7 +8,7 @@
         <!-- <img src="../assets/images/rocks.jpg" alt=""> -->
             <div class="glass">
                 <header>
-                    <h1>tempral</h1>
+                    <h1 id="page-title">tempral</h1>
                 </header>
                 <div class="writing-section">
                     <div class="editing-tools"></div>
@@ -67,29 +67,6 @@ body, html {
 /* -------END OF BACKGROUND------- */
 
 /* -------BACKGROUND MOVEMENT------- */
-/* #slider {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-#slider img {
-  width: 100%; 
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: left is linear;
-}
-
-#slider img:first-child {
-  left: 0;
-}
-
-#slider img:last-child {
-  left: 99%;
-} */
 
 .slider-container {
     overflow: hidden;
@@ -116,11 +93,10 @@ body, html {
   margin: 0;
 }
 
-
-
 /* -------END OF BACKGROUND MOVEMENT------- */
 
 
+/* HEADER */
 
 header {
     position: absolute;
@@ -131,6 +107,9 @@ header {
     color: white;
     font-family: sans-serif;
 }
+
+/* -------END OF HEADER------- */
+
 
 /* -------MAIN------- */
 
@@ -160,7 +139,6 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-
 .text-box {
     /* structure */
     position: absolute;
@@ -170,8 +148,7 @@ header {
     height: 70vh;
     font-family: sans-serif;
     background-color: white;
-    border-radius: 20px;
-    border: 0px;
+    border-radius: 10px;
     /* end of structure */
 
     /* writing */
@@ -184,7 +161,6 @@ header {
 
     /* border */
     border: 3px solid #ffafcc;
-    border-radius: 5px;
     margin: 10px 10px 20px 0px;
     /* end of border */
 }
@@ -193,18 +169,21 @@ header {
     outline: none;
     background: linear-gradient(white, white) padding-box,
     linear-gradient(to right, #c8b6ff, #ffafcc) border-box;
-    border: 3px solid transparent;
+    border: 4px solid transparent;
 }
+
+/* -------END OF MAIN------- */
+
 
 /* -------ASIDE------- */
 
 aside {
     position: absolute;
-        top: 120px;
-        left: 75%;
-        width: 22%;
-        height: 100%;
-        font-family: sans-serif;
+    top: 120px;
+    left: 75%;
+    width: 22%;
+    height: 100%;
+    font-family: sans-serif;
 }
 
 button {
