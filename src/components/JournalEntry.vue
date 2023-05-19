@@ -161,7 +161,7 @@ header {
 
     /* border */
     border: 3px solid #ffafcc;
-    margin: 10px 10px 20px 0px;
+    /* margin: 10px 10px 20px 0px; */
     /* end of border */
 }
 
