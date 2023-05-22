@@ -244,7 +244,8 @@ aside {
 }
 
 .aside-card-heading {
-    color: #4B4B4B;
+    /* color: #4B4B4B; */
+    color: #7698b3;
 }
 
 /* -------END OF ASIDE------- */
