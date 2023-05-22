@@ -267,7 +267,7 @@ aside {
     width: 30px;
 }
 
-/* tray icons are this color: #EA9010 orange */
+/* tray icons are this color: #EA9010 orange #809BCE blue #ce7b91 mauve*/
 .settings-tray-icon > img {
     height: 100%;
     width: 100%;
@@ -298,7 +298,7 @@ aside {
     const intro = ref(journalPrompt)
     const noUserEntry = ref(true)
 
-    
+
     onMounted(() => {
     const textBox = document.getElementById("journal-text")
 
