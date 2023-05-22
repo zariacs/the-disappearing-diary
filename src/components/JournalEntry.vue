@@ -8,7 +8,7 @@
                 </header>
                 <div class="writing-section">
                     <div class="editing-tools"></div>
-                    <textarea id="journal-text" class="text-box suggested" v-model="intro" v-on:click="includeSuggestedText"></textarea>
+                    <textarea id="journal-text" class="text-box suggested" v-model="intro"></textarea>
                 </div>
                 <aside>
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
@@ -16,11 +16,11 @@
                     </a>
                     <div class="aside-card-container">
                         <div class="moods aside-card">
-                        <h2>Moods</h2>
+                            <h2 class="aside-card-heading">Moods</h2>
                         </div>
                         <div class="aside-spacer"></div>
                         <div class="involved aside-card">
-                            <h2></h2>
+                            <h2 class="aside-card-heading"></h2>
                         </div>
                         <div class="settings-tray">
                             <a class="settings-tray-icon"><img src="../assets/settings-tray-icons/settings-icon.png" alt=""></a>
@@ -43,7 +43,7 @@
     /* background-color: #EABAF6; */
     height: 100vh;
     width: 100%;
-    background-image: url("../assets/images/rocks.jpg");
+    background-image: url("../assets/images/background.png");
 }
 
 .moving-background > img {
@@ -59,8 +59,8 @@
     height: 100%;
     /* glass */
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(90px);
-    -webkit-backdrop-filter: blur(90px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 0px; 
 }
 
@@ -93,11 +93,11 @@ body, html {
 }
 
 .slider-image {
-  background: url("../assets/images/rocks.jpg") repeat-x;
+  background: url("../assets/images/background.png") repeat-x;
   height: 100%;
   width: 100%;
   object-fit: cover;
-  animation: slide 200s linear infinite;
+  animation: slide 400s linear infinite;
   margin: 0;
 }
 
@@ -243,7 +243,7 @@ aside {
     height: 30px;   
 }
 
-h2 {
+.aside-card-heading {
     color: #4B4B4B;
 }
 
@@ -267,7 +267,7 @@ h2 {
     width: 30px;
 }
 
-/* tray icons are this color: #f9d4bb */
+/* tray icons are this color: #EA9010 orange */
 .settings-tray-icon > img {
     height: 100%;
     width: 100%;
@@ -279,14 +279,53 @@ h2 {
 </style>
 
 <script setup>
-    import { ref } from 'vue'
+    import { onMounted, ref } from 'vue'
 
-    const intro = ref("Dear Diary, \n\nThere's no sunshine when she's gone.")
+    const songLyricsPrompt = [
+        "Ain't no sunshine when she's gone.",
+        "Ain't no mountain high enough.",
+        "Billie Jean is not my girl and the kid is not my son.",
+        "Girls just wanna have fun."
+    ]
 
-    function includeSuggestedText() {
-        const textBox = document.getElementById("journal-text")
-        textBox.classList.remove("suggested")
-        intro.value = "Dear Diary, \n\n"
+    function chooseSong() {
+        const song = songLyricsPrompt[Math.floor(Math.random() * songLyricsPrompt.length)]
+        return song
     }
+
+    const greeting = "Dear Diary, \n\n"
+    const journalPrompt = greeting + chooseSong()
+    const intro = ref(journalPrompt)
+    const noUserEntry = ref(true)
+
+    
+    onMounted(() => {
+    const textBox = document.getElementById("journal-text")
+
+    function revertToGreeting() {
+        textBox.classList.remove("suggested")
+        intro.value = greeting
+    }
+
+    function noUserEntry() {
+        noUserEntry.value = (intro.value == journalPrompt)
+        return noUserEntry
+    }
+
+    function revertToBaseEntry() {
+        if (noUserEntry()) {
+            console.log("No user entry")
+            textBox.classList.add("suggested")
+            intro.value = journalPrompt
+        }
+    }
+
+    textBox.onfocus = function() {revertToGreeting()}
+    textBox.onblur = function() {revertToBaseEntry()}
+    })
+
+
+
+
 
 </script>
