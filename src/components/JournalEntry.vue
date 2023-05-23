@@ -8,14 +8,14 @@
                 </header>
                 <div class="writing-section">
                     <div class="editing-tools"></div>
-                    <textarea id="journal-text" class="text-box suggested" v-model="intro"></textarea>
+                    <textarea id="journal-text" class="text-box suggested" v-model="entry"></textarea>
                 </div>
                 <aside>
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
                         <button id="destroy-button">Destroy</button>
                     </a>
                     <div class="aside-card-spacer"></div>
-                    <div class="aside-card-container" id="aside-card-container">
+                    <div class="aside-card-container .aside-card-container-delayed" id="aside-card-container">
                         <div class="moods aside-card">
                             <h2 class="aside-card-heading">Moods</h2>
                         </div>
@@ -182,6 +182,21 @@ header {
     color: #a3a3a3;
 }
 
+/* TEXT BOX SCROLLING */
+
+.text-box::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.text-box::-webkit-scrollbar {
+    width: 10px;
+}
+
+.text-box::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #ffafcc80;
+}
+
 /* -------END OF MAIN------- */
 
 
@@ -230,9 +245,6 @@ aside {
     /* scroll */
     overflow: auto;
     visibility: hidden;
-
-
-
 }
 
 .aside-card-spacer {
@@ -265,7 +277,6 @@ aside {
     padding-left: 1.5em;
     padding-right: 1.5em;
     margin-bottom: 40px;
-
 
     /* glass */
     background: rgba(255, 255, 255, 0.2);
@@ -348,28 +359,30 @@ aside {
 
     const greeting = "Dear Diary, \n\n"
     const journalPrompt = greeting + chooseSong()
-    const intro = ref(journalPrompt)
+    const entry = ref(journalPrompt)
     const noUserEntry = ref(true)
 
 
     onMounted(() => {
     const textBox = document.getElementById("journal-text")
 
-    function revertToGreeting() {
-        textBox.classList.remove("suggested")
-        intro.value = greeting
+    function noUserEntry() {
+        noUserEntry.value = (entry.value == journalPrompt || entry.value == "")
+        return noUserEntry.value
     }
 
-    function noUserEntry() {
-        noUserEntry.value = (intro.value == journalPrompt)
-        return noUserEntry
+    function revertToGreeting() {
+        if (noUserEntry()) {
+            textBox.classList.remove("suggested")
+            entry.value = greeting
+        }        
     }
 
     function revertToBaseEntry() {
         if (noUserEntry()) {
             console.log("No user entry")
             textBox.classList.add("suggested")
-            intro.value = journalPrompt
+            entry.value = journalPrompt
         }
     }
 
