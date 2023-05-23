@@ -4,10 +4,13 @@
             <div class="slider-image"></div>
             <div class="glass">
                 <header>
-                    <h1 id="page-title">tempral</h1>
+                    <h1 id="page-title" v-if="title == ''">tempral</h1>
+                    <h1 id="page-title" v-else>{{ title }}</h1>
                 </header>
                 <div class="writing-section">
-                    <div class="editing-tools"></div>
+                    <div class="entry-info-bar">
+                        <input name="title" type="text" v-model="title" placeholder="Title" class="entry-title"/>
+                    </div>
                     <textarea id="journal-text" class="text-box suggested" v-model="entry"></textarea>
                 </div>
                 <aside>
@@ -132,13 +135,18 @@ header {
     height: 100vh;
 }
 
-.editing-tools {
+.entry-info-bar {
     position: absolute;
     top: 40px;
     left: 0;
     width: 100%;
     height: 50px;
     font-family: sans-serif;
+    box-sizing: border-box;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    flex-direction: row;
 
     /* glass */
     background: rgba(255, 255, 255, 0.2);
@@ -148,6 +156,20 @@ header {
     -webkit-backdrop-filter: blur(14.7px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+.entry-title, .entry-title:focus, .entry-title::placeholder {
+    color: #7698b3;
+    font-size: 1em;
+    letter-spacing: 0.10em;
+    caret-color: white;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    /* color: white; */
+}
+
+
 
 .text-box {
     /* structure */
@@ -345,6 +367,9 @@ aside {
 <script setup>
     import { onMounted, ref } from 'vue'
 
+    const title = ref("")
+
+
     const songLyricsPrompt = [
         "Ain't no sunshine when she's gone.",
         "Ain't no mountain high enough.",
@@ -360,11 +385,11 @@ aside {
     const greeting = "Dear Diary, \n\n"
     const journalPrompt = greeting + chooseSong()
     const entry = ref(journalPrompt)
-    const noUserEntry = ref(true)
 
 
     onMounted(() => {
         const textBox = document.getElementById("journal-text")
+        
 
         function noUserEntry() {
             noUserEntry.value = (entry.value == journalPrompt || entry.value == greeting|| entry.value == "")
