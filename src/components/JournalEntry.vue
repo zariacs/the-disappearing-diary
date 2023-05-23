@@ -157,15 +157,15 @@ header {
     width: 100%;
     height: 70vh;
     font-family: sans-serif;
-    background-color: white;
+    background: linear-gradient(to bottom, white, #fff9ec) padding-box;
     border-radius: 10px;
 
     /* writing */
     box-sizing: border-box;
-    padding: 30px;
+    padding: 50px;
     resize: none;
     font-size: 24px;
-    color: #4B4B4B;
+    color: #2a2f3c;
 
     /* border */
     border: 3px solid #ffafcc;
@@ -173,7 +173,7 @@ header {
 
 .text-box:focus {
     outline: none;
-    background: linear-gradient(white, white) padding-box,
+    background: linear-gradient(to bottom, white, #fff9ec) padding-box,
     linear-gradient(to right, #c8b6ff, #ffafcc) border-box;
     border: 4px solid transparent;
 }
@@ -364,30 +364,30 @@ aside {
 
 
     onMounted(() => {
-    const textBox = document.getElementById("journal-text")
+        const textBox = document.getElementById("journal-text")
 
-    function noUserEntry() {
-        noUserEntry.value = (entry.value == journalPrompt || entry.value == "")
-        return noUserEntry.value
-    }
-
-    function revertToGreeting() {
-        if (noUserEntry()) {
-            textBox.classList.remove("suggested")
-            entry.value = greeting
-        }        
-    }
-
-    function revertToBaseEntry() {
-        if (noUserEntry()) {
-            console.log("No user entry")
-            textBox.classList.add("suggested")
-            entry.value = journalPrompt
+        function noUserEntry() {
+            noUserEntry.value = (entry.value == journalPrompt || entry.value == "")
+            return noUserEntry.value
         }
-    }
 
-    textBox.onfocus = function() {revertToGreeting()}
-    textBox.onblur = function() {revertToBaseEntry()}
+        function revertToGreeting() {
+            if (noUserEntry()) {
+                textBox.classList.remove("suggested")
+                entry.value = greeting
+            }        
+        }
+
+        function revertToBaseEntry() {
+            if (noUserEntry()) {
+                console.log("No user entry")
+                textBox.classList.add("suggested")
+                entry.value = journalPrompt
+            }
+        }
+
+        textBox.onfocus = function() {revertToGreeting()}
+        textBox.onblur = function() {revertToBaseEntry()}
     })
 
 </script>
