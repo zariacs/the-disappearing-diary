@@ -111,10 +111,10 @@ body, html {
 header {
     position: absolute;
     top: 20px;
-    left: 40px;
+    left: 3%;
     width: 100%;
     height: 80px;
-    color: #d2d5dd;
+    color: #fff9ec;
     font-family: sans-serif;
 }
 
@@ -126,8 +126,8 @@ header {
 .writing-section {
     position: absolute;
     top: 80px;
-    left: 40px;
-    width: 70%;
+    left: 3%;
+    width: 69.5%;
     min-width: 700px;
     height: 100vh;
 }
