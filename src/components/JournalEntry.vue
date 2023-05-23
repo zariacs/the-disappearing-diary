@@ -367,7 +367,7 @@ aside {
         const textBox = document.getElementById("journal-text")
 
         function noUserEntry() {
-            noUserEntry.value = (entry.value == journalPrompt || entry.value == "")
+            noUserEntry.value = (entry.value == journalPrompt || entry.value == greeting|| entry.value == "")
             return noUserEntry.value
         }
 
