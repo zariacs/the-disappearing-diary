@@ -14,20 +14,17 @@
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
                         <button id="destroy-button">Destroy</button>
                     </a>
+                    <div class="aside-card-spacer"></div>
                     <div class="aside-card-container" id="aside-card-container">
                         <div class="moods aside-card">
                             <h2 class="aside-card-heading">Moods</h2>
                         </div>
-                        <div class="aside-spacer"></div>
                         <div class="involved aside-card">
                             <h2 class="aside-card-heading"></h2>
                         </div>
-                        <div class="aside-spacer"></div>
                         <div class="involved aside-card">
                             <h2 class="aside-card-heading"></h2>
-                        </div>
-                        
-                        
+                        </div>                      
                     </div>
                     <div class="settings-tray">
                             <a class="settings-tray-icon"><img src="../assets/settings-tray-icons/settings-icon.png" alt=""></a>
@@ -162,7 +159,6 @@ header {
     font-family: sans-serif;
     background-color: white;
     border-radius: 10px;
-    /* end of structure */
 
     /* writing */
     box-sizing: border-box;
@@ -170,11 +166,9 @@ header {
     resize: none;
     font-size: 24px;
     color: #4B4B4B;
-    /* end of writing */
 
     /* border */
     border: 3px solid #ffafcc;
-    /* end of border */
 }
 
 .text-box:focus {
@@ -196,36 +190,38 @@ header {
 aside {
     position: absolute;
     top: 120px;
-    left: 75%;
-    width: 22%;
+    right: 3%;
+    width: 23.5%;
     height: 100%;
     font-family: sans-serif;
 }
 
 #destroy-button {
     /* structure */
+    margin-left: 30px;
     background-color: #EA638C;
     height: 50px;
-    width: 100%;
+    width: 90%;
     border-radius: 16px;
     border: 0px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    /* end of structure */
 
     /* text */
     color: white;
     font-weight: bolder;
     font-size: larger;
     letter-spacing: 0.2em;
-    /* end of text */
 }
 
 .aside-card-container {
-    margin-top: 30px;
-    height: 63%;
-    padding-right: 15px;
+    border-radius: 16px;
+    padding: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 65%;
     box-sizing: border-box;
-    width: 105%;
+    width: 106%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     /* flex */
     display: flex;
@@ -234,6 +230,15 @@ aside {
     /* scroll */
     overflow: auto;
     visibility: hidden;
+
+
+
+}
+
+.aside-card-spacer {
+    min-height: 30px;
+    width: 100%;
+    z-index: 10;
 }
 
 /* ASIDE CARD SCROLLING */
@@ -258,6 +263,9 @@ aside {
     font-family: sans-serif;
     box-sizing: border-box;
     padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin-bottom: 40px;
+
 
     /* glass */
     background: rgba(255, 255, 255, 0.2);
@@ -280,24 +288,19 @@ aside {
     transition: visibility 0s 0.2s;
 }
 
-
-.aside-spacer {
-    min-height: 30px;   
-}
-
 .aside-card-heading {
     color: #7698b3;
     border-bottom: 1px solid rgba(255,255,255,0.7);
     padding: 0.5em;
-    width: 85%;
+    width: 90%;
 }
 
 /* END OF ASIDE CARD SCROLLING */
 
 /* -------END OF ASIDE------- */
 
-/* -------SETTINGS TRAY------- */
 
+/* -------SETTINGS TRAY------- */
 
 .settings-tray {
     margin-top: 17px;
@@ -373,9 +376,5 @@ aside {
     textBox.onfocus = function() {revertToGreeting()}
     textBox.onblur = function() {revertToBaseEntry()}
     })
-
-
-
-
 
 </script>
