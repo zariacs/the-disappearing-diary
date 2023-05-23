@@ -9,7 +9,8 @@
                 </header>
                 <div class="writing-section">
                     <div class="entry-info-bar">
-                        <input name="title" type="text" v-model="title" placeholder="Title" class="entry-title"/>
+                        <input name="title" type="text" v-model="title" placeholder="Title" class="entry-title" maxlength="56"/>
+                        <p class="entry-date">{{ currentDate() }}</p>
                     </div>
                     <textarea id="journal-text" class="text-box suggested" v-model="entry"></textarea>
                 </div>
@@ -173,12 +174,18 @@ header {
     letter-spacing: 0.20em;
     caret-color: white;
     font-weight:600;
-
+    width: 60%;
 
     background: transparent;
     border: none;
     outline: none;
-    /* color: white; */
+}
+
+.entry-date {
+    margin-left: auto;
+    font-weight: 540;
+    font-size: 1em;
+    letter-spacing: 0.1em;
 }
 
 
@@ -378,9 +385,19 @@ aside {
 
 <script setup>
     import { onMounted, ref } from 'vue'
+    // import * as moment from 'moment'
+    import moment from 'moment';
 
+    /* ------- ENTRY INFO BAR ------------------------------------------*/
     const title = ref("")
 
+    function currentDate() {
+        let now = moment().format('LLL')
+        return now        
+    }
+
+
+    /* ------- SONG LYRICS ENTRY PROMPT --------------------------------*/
 
     const songLyricsPrompt = [
         "Ain't no sunshine when she's gone.",
