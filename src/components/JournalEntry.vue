@@ -4,8 +4,8 @@
             <div class="slider-image"></div>
             <div class="glass">
                 <header>
-                    <h1 id="page-title" v-if="title == ''">tempral</h1>
-                    <h1 id="page-title" v-else>{{ title }}</h1>
+                    <img src="../assets/menu.png" alt="" class="header-menu-icon">
+                    <h1 id="page-title">tempral</h1>
                 </header>
                 <div class="writing-section">
                     <div class="entry-info-bar">
@@ -119,6 +119,14 @@ header {
     height: 80px;
     color: #fff9ec;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+}
+
+.header-menu-icon {
+    height: 30%;
+    align-self: center;
 }
 
 /* -------END OF HEADER------- */
@@ -147,6 +155,8 @@ header {
     padding-right: 3%;
     display: flex;
     flex-direction: row;
+    color:#a3a3a3;
+
 
     /* glass */
     background: rgba(255, 255, 255, 0.2);
@@ -158,10 +168,12 @@ header {
 }
 
 .entry-title, .entry-title:focus, .entry-title::placeholder {
-    color: #7698b3;
-    font-size: 1em;
-    letter-spacing: 0.10em;
+    color: inherit;
+    font-size: 1.1em;
+    letter-spacing: 0.20em;
     caret-color: white;
+    font-weight:600;
+
 
     background: transparent;
     border: none;
