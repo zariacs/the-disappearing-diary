@@ -9,7 +9,7 @@
                 </header>
                 <div class="writing-section">
                     <div class="entry-info-bar">
-                        <input name="title" type="text" v-model="title" placeholder="Title" class="entry-title" maxlength="56"/>
+                        <input name="title" type="text" v-model="title" placeholder="Title" class="entry-title" maxlength="50"/>
                         <p class="entry-date">{{ currentDate() }}</p>
                     </div>
                     <textarea id="journal-text" class="text-box suggested" v-model="entry"></textarea>
