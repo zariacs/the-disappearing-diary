@@ -174,7 +174,7 @@ header {
     letter-spacing: 0.20em;
     caret-color: white;
     font-weight:600;
-    width: 60%;
+    width: 65%;
 
     background: transparent;
     border: none;
