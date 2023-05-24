@@ -31,11 +31,10 @@
                         </div>                      
                     </div>
                     <div class="settings-tray">
-                            <a class="settings-tray-icon"><img src="../assets/settings-tray-icons/settings-icon.png" alt=""></a>
-                            <a class="settings-tray-icon"><img src="../assets/settings-tray-icons/settings-icon.png" alt=""></a>
-                            <a class="settings-tray-icon"><img src="../assets/settings-tray-icons/settings-icon.png" alt=""></a>
-                        </div>
-                    
+                        <a class="settings-tray-icon"><img src="../assets/settings-tray-icons/settings-icon.png" alt=""></a>
+                        <a class="settings-tray-icon"><img src="../assets/settings-tray-icons/settings-icon.png" alt=""></a>
+                        <a class="settings-tray-icon"><img src="../assets/settings-tray-icons/settings-icon.png" alt=""></a>
+                    </div>
                 </aside>
             </div>
         </div>
@@ -94,7 +93,7 @@ body, html {
     transform: translate(0);
   }
   100% {
-    transform: translate(-150%); /* The image width */
+    transform: translate(-150%); 
   }
 }
 
