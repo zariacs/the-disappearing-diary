@@ -68,7 +68,7 @@ aside {
 
 .aside-card {
     width: 100%;
-    min-height: 285px;
+    min-height: 300px;
     font-family: sans-serif;
     box-sizing: border-box;
     padding-left: 1.5em;
