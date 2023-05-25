@@ -32,7 +32,7 @@ aside {
 
 .aside-card-container {
     border-radius: 16px;
-    padding: px;
+    padding: 30px;
     padding-top: 0px;
     padding-bottom: 0px;
     /* height: 65%; */
