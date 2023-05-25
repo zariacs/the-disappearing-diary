@@ -35,11 +35,9 @@ aside {
     padding: 30px;
     padding-top: 0px;
     padding-bottom: 0px;
-    /* height: 65%; */
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    /* width: 106%; */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     /* flex */
