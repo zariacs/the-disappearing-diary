@@ -2,9 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 // import HomeView from '../views/HomeView.vue'
 // import JournalEntryView from '../views/JournalEntryView.vue'
 import BaseView from '../views/BaseView.vue'
-import WritingSection from '../views/WritingSection.vue'
-import WritingSidePanel from '../views/WritingSidePanel.vue'
-import JournalView from '../views/JournalView.vue'
+import WritingSection from '@/views/WritingSection.vue'
+import WritingSidePanel from '@/views/WritingSidePanel.vue'
+import JournalView from '@/views/JournalView.vue'
+// import App from '../App.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,7 +24,7 @@ const router = createRouter({
     //   component: () => import('../views/AboutView.vue')
     // },
     {
-      path: '/',
+      path: '/base',
       name: 'base',
       component: BaseView
     },
@@ -38,7 +39,7 @@ const router = createRouter({
       component: WritingSidePanel
     },
     {
-      path: '/journal',
+      path: '/',
       name: 'journal',
       component: JournalView
     }
