@@ -1,6 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 // import HomeView from '../views/HomeView.vue'
-import JournalEntryView from '../views/JournalEntryView.vue'
+// import JournalEntryView from '../views/JournalEntryView.vue'
+import BaseView from '../views/BaseView.vue'
+import WritingSection from '../views/WritingSection.vue'
+import WritingSidePanel from '../views/WritingSidePanel.vue'
+import JournalView from '../views/JournalView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,9 +24,24 @@ const router = createRouter({
     // },
     {
       path: '/',
-      name: 'journal',
-      component: JournalEntryView
+      name: 'base',
+      component: BaseView
     },
+    {
+      path: '/writing',
+      name: 'writing',
+      component: WritingSection
+    },
+    {
+      path: '/side',
+      name: 'sidepanel',
+      component: WritingSidePanel
+    },
+    {
+      path: '/journal',
+      name: 'journal',
+      component: JournalView
+    }
   ]
 })
 
