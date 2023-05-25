@@ -68,12 +68,12 @@ aside {
 
 .aside-card {
     width: 100%;
-    min-height: 280px;
+    min-height: 285px;
     font-family: sans-serif;
     box-sizing: border-box;
     padding-left: 1.5em;
     padding-right: 1.5em;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 
     /* glass */
     background: rgba(255, 255, 255, 0.2);
@@ -82,6 +82,10 @@ aside {
     backdrop-filter: blur(14.7px);
     -webkit-backdrop-filter: blur(14.7px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.aside-card:last-child {
+    margin-bottom: 5px;
 }
 
 .aside-card, .aside-card-container:hover, .aside-card-container:focus {
