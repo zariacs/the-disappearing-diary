@@ -24,7 +24,7 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 50px 70vh;
-    row-gap: 3vh;
+    row-gap: 3.5vh;
     column-gap: 1vw;
 }
 

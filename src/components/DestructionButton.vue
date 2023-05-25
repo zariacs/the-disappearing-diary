@@ -10,7 +10,7 @@
 .button {
     box-sizing: border-box;
     margin-left: 30px;
-    margin-right: 30px; 
+    margin-right: 40px; 
 }
 #destroy-button {
     background-color: #EA638C;
