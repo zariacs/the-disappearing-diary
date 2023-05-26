@@ -5,11 +5,17 @@
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
+// @import "../assets/base";
+// @use '../utils' as *;
+@use '../assets/mixin.scss';
 .entry-info-bar {
+    @include glass();
+
     height: 100%;
     width: 100%;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     box-sizing: border-box;
     padding-left: 3vw;
     padding-right: 2vw;
@@ -19,12 +25,13 @@
 
 
     /* glass */
-    background: rgba(255, 255, 255, 0.2);
+
+    /* background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(14.7px);
     -webkit-backdrop-filter: blur(14.7px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .entry-title, .entry-title:focus, .entry-title::placeholder {
