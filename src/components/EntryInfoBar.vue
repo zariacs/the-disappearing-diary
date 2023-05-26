@@ -5,7 +5,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 .entry-info-bar {
     height: 100%;
     width: 100%;

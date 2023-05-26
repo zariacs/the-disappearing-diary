@@ -6,7 +6,7 @@
     </div> 
 </template>
 
-<style>
+<style scoped>
 .button {
     box-sizing: border-box;
     margin-left: 30px;

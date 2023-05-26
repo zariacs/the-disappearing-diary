@@ -1,27 +1,34 @@
 <template>
-    <div class="moving-background">
+    <h1>HOME PAGE!</h1>
+</template>
+<!-- <script setup>
+    import AppHeader from './AppHeader.vue'
+</script>
+
+<template>
+    <div class="background">
         <div class="slider-container">
             <div class="slider-image"></div>
             <div class="glass">
-                <header>
-                    <img src="../assets/menu.png" alt="" class="header-menu-icon">
-                    <h1 id="page-title">tempral</h1>
-                </header>
+                <AppHeader />
             </div>
         </div>
     </div>
 </template>
 
-<style>
+
+
+<style scoped>
 
 /* -------BACKGROUND------- */
-.moving-background {
+.background {
+    top:0px;
     height: 100vh;
     width: 100%;
     background-image: url("../assets/images/background.png");
 }
 
-.moving-background > img {
+.background > img {
     width: 100%;
     height: 100%;
 }
@@ -105,4 +112,4 @@ header {
 
 <script setup>
     
-</script>
+</script> -->

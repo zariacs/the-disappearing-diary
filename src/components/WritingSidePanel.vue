@@ -19,7 +19,7 @@
     </aside>            
 </template>
 
-<style>
+<style scoped>
 
 /* -------ASIDE------- */
 

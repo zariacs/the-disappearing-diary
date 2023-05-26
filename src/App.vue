@@ -1,10 +1,10 @@
 <script setup>
 // import { RouterLink, RouterView } from 'vue-router'
 import { RouterView } from 'vue-router'
-import AppHeader from '@/components/AppHeader.vue'
+
+// import AppHeader from '@/components/AppHeader.vue'
 // import HelloWorld from './components/HelloWorld.vue'
 </script>
-
 
 
 <template>
@@ -12,8 +12,11 @@ import AppHeader from '@/components/AppHeader.vue'
       <div class="slider-container">
           <div class="slider-image"></div>
           <div class="glass">
-              <AppHeader />
-              <RouterView />
+            <header>
+              <img src="@/assets/menu.png" alt="" class="header-menu-icon">
+              <h1 id="page-title">tempral</h1>
+            </header> 
+            <RouterView />
           </div>
       </div>
   </div>
@@ -26,7 +29,7 @@ import AppHeader from '@/components/AppHeader.vue'
   height: 100%;
   width: 100%;
   position: fixed; /* otherwise there's a gap at the bottom sometimes */
-  background-image: url("../assets/images/background.png");
+  background-image: url("@/assets/images/background.png");
 }
 
 .moving-background > img {
@@ -76,7 +79,7 @@ body, html {
 }
 
 .slider-image {
-background: url("../assets/images/background.png") repeat-x;
+background: url("@/assets/images/background.png") repeat-x;
 height: 100%;
 width: 100%;
 object-fit: cover;
@@ -86,8 +89,31 @@ margin: 0;
 
 /* -------END OF BACKGROUND MOVEMENT------- */
 
+
+/* HEADER */
+
+header {
+    position: relative;
+    top: 20px;
+    /* padding-top: 0rem; */
+    /* padding-top: 0px; */
+    left: 3%;
+    width: 100%;
+    height: 80px;
+    color: #fff9ec;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+}
+
+.header-menu-icon {
+    height: 30%;
+    align-self: center;
+}
+
+/* -------END OF HEADER------- */
+
 </style>
 
-<script setup>
-  
-</script>
+

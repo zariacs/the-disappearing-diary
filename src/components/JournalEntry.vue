@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="moving-background">
         <div class="slider-container">
             <div class="slider-image"></div>
@@ -443,4 +443,4 @@ aside {
         textBox.onblur = function() {revertToBaseEntry()}
     })
 
-</script>
+</script> -->

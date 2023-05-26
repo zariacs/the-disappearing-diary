@@ -1,28 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import HomeView from '../views/HomeView.vue'
-// import JournalEntryView from '../views/JournalEntryView.vue'
 import BaseView from '../views/BaseView.vue'
 import WritingSection from '@/views/WritingSection.vue'
 import WritingSidePanel from '@/views/WritingSidePanel.vue'
 import JournalView from '@/views/JournalView.vue'
-// import App from '../App.vue'
+import HomePageView from '@/views/HomePageView.vue'
+import ProjectWikiView from '@/views/ProjectWikiView.vue'
+import UserLoginView from '@/views/UserLoginView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'home',
-    //   component: HomeView
-    // },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue')
-    // },
     {
       path: '/base',
       name: 'base',
@@ -42,6 +29,21 @@ const router = createRouter({
       path: '/',
       name: 'journal',
       component: JournalView
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: HomePageView
+    },
+    {
+      path: '/wiki',
+      name: 'wiki',
+      component: ProjectWikiView
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: UserLoginView
     }
   ]
 })

@@ -15,10 +15,10 @@
 
 </template>
 
-<style>
+<style scoped lang="scss">
 .container {
     position: relative;
-    margin-top: 120px;
+    margin-top: 2.5rem;
     margin-left: 5vw;
     margin-right: 3vw;
     display: grid;
