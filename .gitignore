@@ -29,3 +29,6 @@ coverage
 
 # Virtual environment
 venv/
+
+# Parcel cache
+.parcel-cache

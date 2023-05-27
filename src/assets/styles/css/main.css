@@ -1,0 +1,28 @@
+/* font colors */
+/* button colors */
+/* border colors */
+/* colors i intend to use */
+/* ---------------------------SCROLL BAR */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(245, 245, 245, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.7);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */

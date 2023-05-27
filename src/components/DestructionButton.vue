@@ -1,33 +1,42 @@
 <template>
-    <div class="button">
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-            <button id="destroy-button">Destroy</button>
+    <div class="button-container">
+        <!-- conclude feature is currently unavailable -->
+        <a class="single-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <button class="conclude-button">Conclude</button>
+        </a>   
+        <a class="single-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <button class="destroy-button">Destroy</button>
         </a>    
     </div> 
 </template>
 
-<style scoped>
-.button {
+<style scoped lang="scss">
+
+@use '@/assets/styles/scss/main';
+.button-container {
     box-sizing: border-box;
     margin-left: 30px;
     margin-right: 40px; 
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    justify-content: space-around;
+    // flex-: 1fr 1fr;
 }
-#destroy-button {
-    background-color: #EA638C;
-    height: 100%; 
-    width: 100%;
 
-    border-radius: 16px;
-    border: 0px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+.conclude-button {
+    @include main.button();
 
-    cursor: pointer;
 
-    /* text */
-    color: white;
-    font-weight: bolder;
-    font-size: larger;
-    letter-spacing: 0.2em;
+}
+.destroy-button {
+    @include main.button(main.$hot-pink);
+    @include main.button(#ee4266);
+    // width: 27rem;
+}
+
+.single-button {
+    flex: 1;
 }
 
 </style>

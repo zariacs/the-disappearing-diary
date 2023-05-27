@@ -19,7 +19,9 @@
     </aside>            
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
+@use '@/assets/styles/scss/main';
 
 /* -------ASIDE------- */
 
@@ -52,36 +54,30 @@ aside {
 
 /* ASIDE CARD SCROLLING */
 
-::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: rgba(245, 245, 245,.1);
-}
+// ::-webkit-scrollbar-track {
+//     border-radius: 10px;
+//     background-color: rgba(245, 245, 245,.1);
+// }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
+// ::-webkit-scrollbar {
+//     width: 10px;
+// }
 
-::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    -webkit-box-shadow: inset 0 0 6px rgba(250,250,250,.8);
-}
+// ::-webkit-scrollbar-thumb {
+//     border-radius: 20px;
+//     -webkit-box-shadow: inset 0 0 6px rgba(250,250,250,.8);
+// }
 
 .aside-card {
     width: 100%;
     min-height: 300px;
-    /* font-family: sans-serif; */
     box-sizing: border-box;
     padding-left: 1.5em;
     padding-right: 1.5em;
     margin-bottom: 45px;
 
     /* glass */
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(14.7px);
-    -webkit-backdrop-filter: blur(14.7px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    @include main.glass;
 }
 
 .aside-card:last-child {
@@ -101,8 +97,8 @@ aside {
 }
 
 .aside-card-heading {
-    color: #7698b3;
-    border-bottom: 1px solid rgba(255,255,255,0.7);
+    color: main.$blue;
+    border-bottom: 1px solid main.$light-grey;
     padding: 0.5em;
     width: 90%;
 }

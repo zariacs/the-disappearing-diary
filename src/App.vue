@@ -22,7 +22,9 @@ import { RouterView } from 'vue-router'
   </div>
 </template>
 
-<style>
+<style lang="scss">
+
+@use '@/assets/styles/scss/main';
 
 /* -------BACKGROUND------- */
 .moving-background {
@@ -50,13 +52,13 @@ import { RouterView } from 'vue-router'
   border: 0px; 
 }
 
-body, html {
+/* body, html {
   margin: 0;
   padding: 0;
   overflow: hidden;
   height: 100%;
   font-family: sans-serif;
-}
+} */
 
 /* -------END OF BACKGROUND------- */
 
@@ -100,7 +102,7 @@ header {
     left: 3%;
     width: 100%;
     height: 80px;
-    color: #fff9ec;
+    color: main.$cream;
     /* font-family: sans-serif; */
     display: flex;
     flex-direction: row;
