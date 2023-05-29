@@ -107,10 +107,11 @@ body, html {
     letter-spacing: 0.15rem;
     
     &:hover {
-        background: tint($background, 10%);
-        // background: $background;
+        background: $background;
         transition: 0.15s ease-out;
     }
 }
+
+
 
 
