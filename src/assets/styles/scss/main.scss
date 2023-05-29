@@ -20,6 +20,27 @@ $rosy-nude: #faa275;
 $bright-mauve: #dd7596;
 $dark-pink: #ee4266;
 
+/* -----------------------LIGHTEN & DARKEN */
+
+// Slightly lighten a color
+// @access public
+// @param {Color} $color - color to tint
+// @param {Number} $percentage - percentage of `$color` in returned color
+// @return {Color}
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+// Slightly darken a color
+// @access public
+// @param {Color} $color - color to shade
+// @param {Number} $percentage - percentage of `$color` in returned color
+// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+
 /* ---------------------------SCROLL BAR */
 
 ::-webkit-scrollbar-track {
@@ -63,7 +84,8 @@ body, html {
     @include glass;
     @include soft-shadow;
 
-    background: none;
+    // background: none;
+    background: $background;
     height: 100%; 
     width: 100%;
 
@@ -81,8 +103,10 @@ body, html {
     letter-spacing: 0.15rem;
     
     &:hover {
-        // background: darken($background, 10%);
-        background: $background;
+        background: tint($background, 10%);
+        // background: $background;
         transition: 0.15s ease-out;
     }
 }
+
+
