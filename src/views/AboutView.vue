@@ -1,10 +1,14 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>ABOUT PAGE</h1>
   </div>
 </template>
 
-<style>
+<style scoped lang="scss">
+
+@use '@/assets/styles/scss/main';
+
+
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
@@ -12,4 +16,10 @@
     align-items: center;
   }
 }
+
+
+div {
+    @include main.route-placeholder();
+}
+
 </style>

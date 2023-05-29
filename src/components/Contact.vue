@@ -1,7 +1,11 @@
+<script setup>
+
+</script>
+
 <template>
-    <div>
-        <H1>LOGIN PAGE</H1>
-    </div>
+  <div>
+    <h1>CONTACT THE CREATOR</h1>
+  </div>
 </template>
 
 <style scoped lang="scss">

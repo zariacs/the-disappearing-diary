@@ -1,11 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import BaseView from '../views/BaseView.vue'
-import WritingSection from '@/views/WritingSection.vue'
-import WritingSidePanel from '@/views/WritingSidePanel.vue'
 import JournalView from '@/views/JournalView.vue'
 import HomePageView from '@/views/HomePageView.vue'
 import ProjectWikiView from '@/views/ProjectWikiView.vue'
 import UserLoginView from '@/views/UserLoginView.vue'
+import AboutView from '@/views/AboutView.vue'
+import TheWelcomeView from '@/views/TheWelcomeView.vue'
+import ContactView from '@/views/ContactView.vue'
+
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,16 +17,6 @@ const router = createRouter({
       path: '/base',
       name: 'base',
       component: BaseView
-    },
-    {
-      path: '/writing',
-      name: 'writing',
-      component: WritingSection
-    },
-    {
-      path: '/side',
-      name: 'sidepanel',
-      component: WritingSidePanel
     },
     {
       path: '/',
@@ -44,6 +37,21 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: UserLoginView
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: AboutView
+    },
+    {
+      path: '/welcome',
+      name: 'welcome',
+      component: TheWelcomeView
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: ContactView
     }
   ]
 })

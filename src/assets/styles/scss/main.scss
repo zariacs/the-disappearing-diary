@@ -23,6 +23,7 @@ $dark-pink: #ee4266;
 
 $site-title: white;
 $entry-info-bar-text: $grey;
+$route-placeholder-color: #f3d8c7;
 
 /* -----------------------LIGHTEN & DARKEN */
 
@@ -112,6 +113,15 @@ body, html {
     }
 }
 
+@mixin route-placeholder {
+    display: flex;
+    height: 80vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    color: $route-placeholder-color;
+}
 
 
 
