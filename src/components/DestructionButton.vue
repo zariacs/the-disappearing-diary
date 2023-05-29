@@ -20,24 +20,25 @@
     display: flex;
     flex-direction: row;
     column-gap: 1rem;
-    justify-content: space-around;
-    // flex-: 1fr 1fr;
+
+    .single-button {
+        flex: 1;
+    }
+
+    .conclude-button {
+        @include main.button();
+    }
+    .destroy-button {
+        // @include main.button(main.$hot-pink);
+        @include main.button(#ee4266);
+        // width: 27rem;
+    }
 }
 
-.conclude-button {
-    @include main.button();
 
 
-}
-.destroy-button {
-    @include main.button(main.$hot-pink);
-    @include main.button(#ee4266);
-    // width: 27rem;
-}
 
-.single-button {
-    flex: 1;
-}
+
 
 </style>
 
