@@ -12,13 +12,17 @@ $hot-pink: #EA638C;
 
 /* border colors */
 $light-grey: rgba(255,255,255,0.7);
-// $light-grey: blue;
 
 /* colors i intend to use */
 $light-blue: #b7c3f3;
 $rosy-nude: #faa275;
 $bright-mauve: #dd7596;
 $dark-pink: #ee4266;
+
+/* use of the colors */
+
+$site-title: white;
+$entry-info-bar-text: $grey;
 
 /* -----------------------LIGHTEN & DARKEN */
 
@@ -99,7 +103,7 @@ body, html {
     /* text */
     color: white;
     font-weight:600;
-    font-size:medium;
+    font-size:1rem;
     letter-spacing: 0.15rem;
     
     &:hover {

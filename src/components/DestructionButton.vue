@@ -30,7 +30,8 @@
     }
     .destroy-button {
         // @include main.button(main.$hot-pink);
-        @include main.button(#ee4266);
+        // @include main.button(#ee4266);
+        @include main.button(#e43f6f);
         // width: 27rem;
     }
 }

@@ -16,9 +16,9 @@
 
     /* writing */
     box-sizing: border-box;
-    padding: 3vw;
+    padding: 3rem;
     resize: none;
-    font-size: 24px;
+    font-size: 1.2rem;
     color: #2a2f3c;
 
     /* border */

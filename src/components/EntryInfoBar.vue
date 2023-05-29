@@ -13,11 +13,11 @@
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    padding-left: 3vw;
-    padding-right: 2vw;
+    padding-left: 3rem;
+    padding-right: 2rem;
     display: flex;
     flex-direction: row;
-    color: main.$grey;
+    color: main.$entry-info-bar-text;
 
 
     /* glass */

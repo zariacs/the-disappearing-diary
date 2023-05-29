@@ -1,9 +1,6 @@
 <script setup>
 // import { RouterLink, RouterView } from 'vue-router'
 import { RouterView } from 'vue-router'
-
-// import AppHeader from '@/components/AppHeader.vue'
-// import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 
@@ -30,8 +27,9 @@ import { RouterView } from 'vue-router'
 .moving-background {
   height: 100%;
   width: 100%;
-  position: fixed; /* otherwise there's a gap at the bottom sometimes */
+  position: fixed; /* otherwise there's a gap at the bottom on certain zoom levels */
   background-image: url("@/assets/images/background.png");
+  
 }
 
 .moving-background > img {
@@ -51,14 +49,6 @@ import { RouterView } from 'vue-router'
   -webkit-backdrop-filter: blur(20px);
   border: 0px; 
 }
-
-/* body, html {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 100%;
-  font-family: sans-serif;
-} */
 
 /* -------END OF BACKGROUND------- */
 
@@ -97,13 +87,10 @@ margin: 0;
 header {
     position: relative;
     top: 20px;
-    /* padding-top: 0rem; */
-    /* padding-top: 0px; */
-    left: 3%;
+    left: 5vw;
     width: 100%;
     height: 80px;
-    color: main.$cream;
-    /* font-family: sans-serif; */
+    color: main.$site-title;
     display: flex;
     flex-direction: row;
     column-gap: 1em;

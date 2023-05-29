@@ -50,24 +50,6 @@ aside {
     overflow: auto;
     visibility: hidden; 
 }
-
-
-/* ASIDE CARD SCROLLING */
-
-// ::-webkit-scrollbar-track {
-//     border-radius: 10px;
-//     background-color: rgba(245, 245, 245,.1);
-// }
-
-// ::-webkit-scrollbar {
-//     width: 10px;
-// }
-
-// ::-webkit-scrollbar-thumb {
-//     border-radius: 20px;
-//     -webkit-box-shadow: inset 0 0 6px rgba(250,250,250,.8);
-// }
-
 .aside-card {
     width: 100%;
     min-height: 300px;
