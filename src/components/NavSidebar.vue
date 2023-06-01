@@ -1,14 +1,13 @@
 <template>
-    <!-- <div class="exp" :class="{ 'nav-expanded': nav_expanded}"> -->
     <aside  >
-        <div class="menu-toggle-wrap">
-            <button class="menu-toggle" @click="ToggleMenu">
+        <div class="nav-toggle-wrap">
+            <button class="nav-toggle" @click="ToggleNav">
                 <span class="material-symbols-rounded">menu</span>
             </button>
         </div>
   
-        <div class="menu-container" :class="{ 'nav-expanded': nav_expanded}">
-            <div class="menu">
+        <div class="nav-container" :class="{ 'nav-expanded': nav_expanded}">
+            <div class="nav-menu">
                 <router-link class="button" to="/">
                     <span class="material-symbols-rounded">home</span>
                     <span class="text">Home</span>
@@ -29,7 +28,7 @@
             
             <div class="flex"></div>
 
-            <div class="menu">
+            <div class="nav-menu">
                 <router-link class="button" to="/settings">
                     <span class="material-symbols-rounded">settings</span>
                     <span class="text">Settings</span>
@@ -37,26 +36,11 @@
             </div>
         </div>
     </aside>
-    <div class="placeholder"></div>
-<!-- </div> -->
 </template>
 
 <style scoped lang="scss">
 
 @use '@/assets/styles/scss/main';
-
-.exp {
-    display: flex;
-    flex-direction: row;
-
-    .placeholder {
-        height: 100px;
-        width: 100px;
-        background: black;
-        flex: 1;
-    }
-}
-
 
 aside {
     display: flex;
@@ -66,7 +50,7 @@ aside {
     padding-bottom: 7rem;
     margin-left: 2rem;
     
-    .menu-toggle {
+    .nav-toggle {
         margin-left: 1.5vw;
         border-radius: 50%;
         height: 3rem;
@@ -83,7 +67,7 @@ aside {
         }
     }
 
-    .menu-container {
+    .nav-container {
         @include main.glass();
         padding: 2rem;
         padding-top: 3rem;
@@ -102,10 +86,9 @@ aside {
             transition: 0.25s ease-out;
         }
 
-        .menu {
+        .nav-menu {
             display: flex;
             flex-direction: column;
-
 
             .button {
                 text-decoration: none;
@@ -118,7 +101,6 @@ aside {
                 border: 1px solid transparent; // without this the buttons jump a bit on hover due to the addition of the 1px glass border
                 font-size: 1.1rem;
                 text-transform: uppercase;
-
                 &:hover, &.router-link-exact-active {
                     // @include main.glass();
                     // background: rgba(255, 255, 255, 0.1);
@@ -151,7 +133,7 @@ import { ref } from 'vue'
 
 const nav_expanded = ref(localStorage.getItem('nav_expanded') === 'true')
 
-const ToggleMenu = () => {
+const ToggleNav = () => {
     nav_expanded.value = !nav_expanded.value
     localStorage.setItem('nav_expanded', nav_expanded.value)
 }
