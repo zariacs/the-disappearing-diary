@@ -54,8 +54,7 @@ aside {
     width: 100%;
     min-height: 300px;
     box-sizing: border-box;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    padding: 1.5rem;
     margin-bottom: 45px;
 
     /* glass */
@@ -82,7 +81,9 @@ aside {
     color: main.$blue;
     border-bottom: 1px solid main.$light-grey;
     padding: 0.5em;
-    width: 90%;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.2rem;
 }
 
 /* END OF ASIDE CARD SCROLLING */

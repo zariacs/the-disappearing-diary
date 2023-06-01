@@ -140,5 +140,10 @@ button {
     color: $route-placeholder-color;
 }
 
+@mixin vertical-center {
+    display: flex;
+    align-items: center;
+}
+
 
 
