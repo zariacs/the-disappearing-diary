@@ -1,5 +1,4 @@
 <template>
-    <h1>HOME PAGE!</h1>
 </template>
 <!-- <script setup>
     import AppHeader from './AppHeader.vue'

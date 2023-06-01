@@ -18,8 +18,6 @@
 <style scoped lang="scss">
 .container {
     position: relative;
-    margin-top: 2.5rem;
-    margin-left: 5vw;
     margin-right: 3vw;
     display: grid;
     grid-template-columns: 2.5fr 1fr;

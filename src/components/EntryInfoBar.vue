@@ -10,6 +10,8 @@
 @use '@/assets/styles/scss/main';
 
 .entry-info-bar {
+    @include main.glass;
+
     height: 100%;
     width: 100%;
     box-sizing: border-box;
@@ -17,11 +19,8 @@
     padding-right: 2rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
     color: main.$entry-info-bar-text;
-
-
-    /* glass */
-    @include main.glass;
 }
 
 .entry-title, .entry-title:focus, .entry-title::placeholder {

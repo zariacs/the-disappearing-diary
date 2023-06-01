@@ -24,6 +24,8 @@ $dark-pink: #ee4266;
 $site-title: white;
 $entry-info-bar-text: $grey;
 $route-placeholder-color: #f3d8c7;
+$nav-title: white;
+$nav-link: white;
 
 /* -----------------------LIGHTEN & DARKEN */
 
@@ -70,6 +72,21 @@ body, html {
     height: 100%;
     font-family: sans-serif;
   }
+
+button {
+    appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+    cursor: pointer;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	// font-family: 'Fira sans', sans-serif;
+}
 
   @mixin soft-shadow {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
