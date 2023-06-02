@@ -58,7 +58,7 @@ import {onMounted, ref } from 'vue';
 const zenMode = ref(false);
 
 function activateZenMode() {
-    setTimeout(() => zenMode.value = !zenMode.value, 5000);
+    setTimeout(() => zenMode.value = !zenMode.value, 10000);
 }
 
 onMounted(() => {
