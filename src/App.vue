@@ -5,7 +5,7 @@
       <div class="slider-image"></div>
     </div>
     <div class="glass">
-      <div class="page">
+      <div class="page" :class="{ 'nav-expanded': nav_expanded}">
         <div class="left-spacer" id="left-spacer"></div>
           <div class="nav-toggle-wrap at-top-of-page" id="nav-toggle">
             <button class="nav-toggle" @click="ToggleNav" >
@@ -61,15 +61,29 @@
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 3vw 5vw 14.5vw 1fr 1fr 2vw;
+  grid-template-columns: 3vw 5vw 0 1fr 1fr 8vw;
+
   // the fourth column is for the login/out profile for the header
   // coming soon
 
   grid-template-rows: 13vh minmax(0, 78.5vh) 8.5vh;
+
   grid-template-areas:
-    "left-spacer nav-toggle header header header right-spacer"
-    "left-spacer nav-container nav-container content content right-spacer"
-    "footer footer footer footer footer footer";
+      "left-spacer nav-toggle header header header right-spacer"
+      "left-spacer nav-container nav-container content content right-spacer"
+      "footer footer footer footer footer footer";
+
+  transition: 0.1s ease-out;
+
+  &.nav-expanded {
+    grid-template-columns: 3vw 5vw 14.5vw 1fr 1fr 2vw;
+    transition: 0.1s ease-out;    
+  }
+
+  // grid-template-areas:
+  //     "left-spacer nav-toggle header header header right-spacer"
+  //     "left-spacer content right-spacer"
+  //     "footer footer footer footer footer footer";
   
   .nav-toggle-wrap {
     @include main.vertical-center();
@@ -96,7 +110,6 @@
     @include main.glass();
     background-color: none;
     backdrop-filter: none;
-    // background: #86138810;
     padding: 2rem;
     padding-top: 10rem;
     height: 100%;
@@ -117,13 +130,7 @@
 
       .button {
         text-decoration: none;
-        // color: main.$nav-link;
         color: #c799a6;
-        // color: #81523f;
-
-        // color: white;
-        // color: #cb958e;
-        // color: main.$rosy-nude;
         letter-spacing: 0.15rem;
         font-weight: 400;
 
@@ -144,7 +151,6 @@
           border: 1px solid rgba(255, 255, 255, 0.3);
           backdrop-filter: blur(5px);
           -webkit-backdrop-filter: blur(5px);
-          // color: #c799a6;
         }
 
         .material-symbols-rounded {
