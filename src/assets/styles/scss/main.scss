@@ -1,7 +1,7 @@
 
 /* font colors */
 $cream: #ffe2d6;
-// $cream: #f3d8c7;
+$cream: #f3d8c7;
 
 $grey: #a3a3a3;
 $blue: #7698b3;
@@ -21,10 +21,10 @@ $dark-pink: #ee4266;
 
 /* use of the colors */
 
-$site-title: white;
+$site-title: #ffffff;
 $entry-info-bar-text: $grey;
 $route-placeholder-color: #f3d8c7;
-$nav-title: white;
+$nav-title: #c799a6;
 $nav-link: white;
 
 /* -----------------------LIGHTEN & DARKEN */
@@ -70,7 +70,7 @@ body, html {
     padding: 0;
     overflow: hidden;
     height: 100%;
-    font-family: sans-serif;
+    // font-family: sans-serif;
   }
 
 button {
@@ -81,11 +81,17 @@ button {
     cursor: pointer;
 }
 
-* {
+*:not(h1) {
+    // the raleway font flashes for the site title before switching to amatic
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	// font-family: 'Fira sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
 }
 
   @mixin soft-shadow {

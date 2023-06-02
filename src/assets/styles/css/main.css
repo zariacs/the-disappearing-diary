@@ -24,7 +24,6 @@ body, html {
   padding: 0;
   overflow: hidden;
   height: 100%;
-  font-family: sans-serif;
 }
 
 button {
@@ -35,10 +34,15 @@ button {
   cursor: pointer;
 }
 
-* {
+*:not(h1) {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  font-family: "Amatic SC", cursive;
 }
 
 /*# sourceMappingURL=main.css.map */

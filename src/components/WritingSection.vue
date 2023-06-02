@@ -10,7 +10,6 @@
     /* structure */
     height: 100%;
     width: 100%;
-    font-family: sans-serif;
     background: linear-gradient(to bottom, white, #fff9ec) padding-box;
     border-radius: 10px;
 

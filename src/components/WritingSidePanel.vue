@@ -28,7 +28,6 @@
 aside {
     height: 100%;
     width: 100%;
-    font-family: sans-serif;
 }
 
 
@@ -79,11 +78,13 @@ aside {
 
 .aside-card-heading {
     color: main.$blue;
+    color: main.$nav-title;
     border-bottom: 1px solid main.$light-grey;
     padding: 0.5em;
     width: 100%;
     text-transform: uppercase;
     font-size: 1.2rem;
+    font-weight: 500;
 }
 
 /* END OF ASIDE CARD SCROLLING */

@@ -40,7 +40,7 @@
             </div>
           </div>
           <header id="header" class="at-top-of-page">
-            <h1 id="page-title">Disappearing Diary</h1>
+            <h1 id="page-title">The Disappearing Diary</h1>
           </header> 
           <div class="content" id="content">
             <RouterView />
@@ -94,12 +94,14 @@
 
   .nav-container {
     @include main.glass();
+    background-color: none;
+    backdrop-filter: none;
+    // background: #86138810;
     padding: 2rem;
-    padding-top: 5rem;
+    padding-top: 10rem;
     height: 100%;
     display: flex;
     flex-direction: column;
-    color: main.$nav-title;
     width: 20rem;
     transform: translateX(-25rem);
     transition: 0.25s ease-out;
@@ -115,25 +117,34 @@
 
       .button {
         text-decoration: none;
-        color: main.$nav-link;
+        // color: main.$nav-link;
+        color: #c799a6;
+        // color: #81523f;
+
+        // color: white;
+        // color: #cb958e;
+        // color: main.$rosy-nude;
+        letter-spacing: 0.15rem;
+        font-weight: 400;
+
         border-radius: 10px;
         padding: 1rem;
         display: flex;
         align-items: center;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
         border: 1px solid transparent; // without this the buttons jump a bit on hover due to the addition of the 1px glass border
-        font-size: 1.1rem;
+        font-size: 1rem;
         text-transform: uppercase;
 
         &:hover, &.router-link-exact-active {
           // @include main.glass();
-          // background: rgba(255, 255, 255, 0.1);
-          background: #fcd0a120;
+          background: rgba(255, 255, 255, 0.1);
           border-radius: 14px;
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           border: 1px solid rgba(255, 255, 255, 0.3);
-          // backdrop-filter: blur(14.7px);
-          // -webkit-backdrop-filter: blur(14.7px);
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+          // color: #c799a6;
         }
 
         .material-symbols-rounded {
@@ -205,6 +216,15 @@
 header {
     @include main.vertical-center();
     color: main.$site-title;
+    font-size: 1.4rem;    
+    
+    h1 {
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: #ffffff20;
+        transition: 0.2s ease-out;
+      }
+    }
 }
 
 

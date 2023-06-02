@@ -28,7 +28,7 @@
     font-size: 1.2rem;
     letter-spacing: 0.25rem;
     caret-color: white;
-    font-weight:600;
+    font-weight:500;
     width: 65%;
 
     /*text box */
@@ -39,7 +39,7 @@
 
 .entry-date {
     margin-left: auto;
-    font-weight: 540;
+    font-weight: 300;
     font-size: 1rem;
     letter-spacing: 0.1rem;
 }
