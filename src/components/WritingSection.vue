@@ -19,6 +19,8 @@
     resize: none;
     font-size: 1.2rem;
     color: #2a2f3c;
+    letter-spacing: 0.2rem;
+    line-height: 1.5;
 
     /* border */
     border: 3px solid #ffafcc;
