@@ -7,6 +7,8 @@ import UserLoginView from '@/views/UserLoginView.vue'
 import AboutView from '@/views/AboutView.vue'
 import TheWelcomeView from '@/views/TheWelcomeView.vue'
 import ContactView from '@/views/ContactView.vue'
+import NewEntryView from '@/views/NewEntryView.vue'
+
 
 
 
@@ -52,6 +54,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: ContactView
+    },
+    {
+      path: '/write',
+      name: 'write',
+      component: NewEntryView
     }
   ]
 })

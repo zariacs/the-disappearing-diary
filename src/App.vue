@@ -289,4 +289,11 @@ const ToggleNav = () => {
     localStorage.setItem('nav_expanded', nav_expanded.value)
 }
 
+
+// convert entry to image
+
+// import domtoimage from 'dom-to-image';
+
+
+
 </script>
