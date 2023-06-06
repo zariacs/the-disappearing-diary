@@ -290,10 +290,4 @@ const ToggleNav = () => {
 }
 
 
-// convert entry to image
-
-// import domtoimage from 'dom-to-image';
-
-
-
 </script>

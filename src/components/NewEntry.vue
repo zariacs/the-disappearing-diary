@@ -70,6 +70,21 @@
     })
 
 
+    // convert entry to image
+
+    import domtoimage from 'dom-to-image';
+
+    function convertEntryToImage() {
+        domtoimage.toJpeg(document.getElementById('writing-section'), { quality: 0.95 })
+            .then(function (dataUrl) {
+                var link = document.createElement('a');
+                link.download = 'my-image-name.jpeg';
+                link.href = dataUrl;
+                link.click();
+            });
+    }
+
+
 </script>
 
 <template>
@@ -80,8 +95,7 @@
         </div>
 
         <div class="button-container">
-            <!-- conclude feature is currently unavailable -->
-            <a class="single-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <a class="single-button" id="conclude-button" @click="convertEntryToImage()">
                 <button class="conclude-button" :class="{ 'glass-button': zenMode}">Conclude</button>
             </a>   
             <a class="single-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
@@ -89,7 +103,7 @@
             </a>    
         </div> 
 
-        <div class="writing-section">
+        <div class="writing-section" id="writing-section">
             <textarea id="journal-text" class="text-box suggested" v-model="entry"></textarea>
         </div> 
 
