@@ -73,15 +73,30 @@
     // convert entry to image
 
     import domtoimage from 'dom-to-image';
-
     function convertEntryToImage() {
-        domtoimage.toJpeg(document.getElementById('writing-section'), { quality: 0.95 })
-            .then(function (dataUrl) {
-                var link = document.createElement('a');
-                link.download = 'my-image-name.jpeg';
-                link.href = dataUrl;
-                link.click();
-            });
+
+    var node = document.getElementById('writing-section');
+    var innerNode = document.getElementById('journal-text');
+
+    domtoimage.toPng(node)
+        .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+            innerNode.remove();
+            node.appendChild(img);
+        })
+        .catch(function (error) {
+            console.error('oops, something went wrong!', error);
+        });
+
+    // function convertEntryToImage() {
+    //     domtoimage.toJpeg(document.getElementById('writing-section'), { quality: 1 })
+    //         .then(function (dataUrl) {
+    //             var link = document.createElement('a');
+    //             link.download = 'journal-entry.jpeg';
+    //             link.href = dataUrl;
+    //             link.click();
+    //         });
     }
 
 
