@@ -83,20 +83,12 @@
             var img = new Image();
             img.src = dataUrl;
             innerNode.remove();
-            node.appendChild(img);
+            node.style.backgroundImage = "url('" + dataUrl.replace(/(\r\n|\n|\r)/gm, "") + "')" // removes line breaks in data url
+            node.classList.add("punch");
         })
         .catch(function (error) {
             console.error('oops, something went wrong!', error);
         });
-
-    // function convertEntryToImage() {
-    //     domtoimage.toJpeg(document.getElementById('writing-section'), { quality: 1 })
-    //         .then(function (dataUrl) {
-    //             var link = document.createElement('a');
-    //             link.download = 'journal-entry.jpeg';
-    //             link.href = dataUrl;
-    //             link.click();
-    //         });
     }
 
 
@@ -110,10 +102,10 @@
         </div>
 
         <div class="button-container">
-            <a class="single-button" id="conclude-button" @click="convertEntryToImage()">
+            <a class="single-button" id="conclude-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
                 <button class="conclude-button" :class="{ 'glass-button': zenMode}">Conclude</button>
             </a>   
-            <a class="single-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <a class="single-button" id="destroy-button" @click="convertEntryToImage()">
                 <button class="destroy-button" :class="{ 'glass-button': zenMode}">Destroy</button>
             </a>    
         </div> 
@@ -213,6 +205,13 @@
 
 
 .writing-section {
+
+    &.punch {
+        &:hover {
+            -webkit-mask: radial-gradient(300px, #0000 98%, #000);
+            mask: radial-gradient(300px, #0000 98%, #000);
+        }
+    }
     .text-box {
         /* structure */
         height: 100%;
