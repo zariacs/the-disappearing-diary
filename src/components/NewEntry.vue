@@ -207,8 +207,8 @@
 .writing-section {
 
     &.punch {
-        -webkit-mask: radial-gradient(200px, #0000 50%, #000);
-        mask: radial-gradient(200px, #0000 50%, #000);
+        -webkit-mask: radial-gradient(300px, #0000 50%, #000);
+        mask: radial-gradient(300px, #0000 50%, #000);
     }
     .text-box {
         /* structure */
