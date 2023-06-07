@@ -84,7 +84,7 @@
             img.src = dataUrl;
             innerNode.remove();
             node.style.backgroundImage = "url('" + dataUrl.replace(/(\r\n|\n|\r)/gm, "") + "')" // removes line breaks in data url
-            node.classList.add("punch");
+            node.addEventListener("click", () => node.classList.add("punch"));
         })
         .catch(function (error) {
             console.error('oops, something went wrong!', error);
@@ -207,10 +207,8 @@
 .writing-section {
 
     &.punch {
-        &:hover {
-            -webkit-mask: radial-gradient(300px, #0000 98%, #000);
-            mask: radial-gradient(300px, #0000 98%, #000);
-        }
+        -webkit-mask: radial-gradient(200px, #0000 50%, #000);
+        mask: radial-gradient(200px, #0000 50%, #000);
     }
     .text-box {
         /* structure */
