@@ -75,20 +75,32 @@
     import domtoimage from 'dom-to-image';
     function convertEntryToImage() {
 
-    var node = document.getElementById('writing-section');
-    var innerNode = document.getElementById('journal-text');
+        var node = document.getElementById('writing-section');
+        var innerNode = document.getElementById('journal-text');
 
-    domtoimage.toPng(node)
-        .then(function (dataUrl) {
-            var img = new Image();
-            img.src = dataUrl;
-            innerNode.remove();
-            node.style.backgroundImage = "url('" + dataUrl.replace(/(\r\n|\n|\r)/gm, "") + "')" // removes line breaks in data url
-            node.addEventListener("click", () => node.classList.add("punch"));
-        })
-        .catch(function (error) {
-            console.error('oops, something went wrong!', error);
-        });
+        domtoimage.toPng(node)
+            .then(function (dataUrl) {
+                var img = new Image();
+                img.src = dataUrl;
+                innerNode.remove();
+                node.style.backgroundImage = "url('" + dataUrl.replace(/(\r\n|\n|\r)/gm, "") + "')" // removes line breaks in data url
+                node.onclick = function(event) {
+                    node.classList.add("punch");
+                    // var containerRectangle = event.currentTarget.getBoundingClientRect();
+                    // var x = event.clientX - containerRectangle.left;
+                    // var y = event.clientY - containerRectangle.top;
+                    // console.log("x - " + x + ", y - " + y);
+                    // node.style['-webkit-mask'] = node.style['-webkit-mask'] + 'radial-gradient(300px at 300px 300px, transparent 50%, black)';
+                    // console.log(node.style.mask);
+                }
+            })
+            .catch(function (error) {
+                console.error('oops, something went wrong!', error);
+            });
+
+            
+
+    
     }
 
 
@@ -207,9 +219,18 @@
 .writing-section {
 
     &.punch {
-        -webkit-mask: radial-gradient(300px, #0000 50%, #000);
-        mask: radial-gradient(300px, #0000 50%, #000);
+        -webkit-mask: radial-gradient(300px at 700px 350px, transparent 80%, black);
+        mask: radial-gradient(300px at 700px 350px, transparent 80%, black);
+        background: radial-gradient(circle at 700px 350px, transparent 80%, black);
     }
+
+    &.punch2 {
+        -webkit-mask: radial-gradient(300px at 300px 300px, transparent 50%, black);
+        mask: radial-gradient(300px at 300px 300px, transparent 50%, black);
+        background: radial-gradient(circle at 300px 300px, transparent 50%, black);
+    }
+
+    
     .text-box {
         /* structure */
         height: 100%;

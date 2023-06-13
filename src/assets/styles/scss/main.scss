@@ -1,7 +1,7 @@
 
 /* font colors */
 $cream: #ffe2d6;
-$cream: #f3d8c7;
+// $cream: #f3d8c7;
 
 $grey: #a3a3a3;
 $blue: #7698b3;
@@ -23,7 +23,7 @@ $dark-pink: #ee4266;
 
 $site-title: #ffffff;
 $entry-info-bar-text: $grey;
-$route-placeholder-color: #f3d8c7;
+$route-placeholder-color: $cream;
 $nav-title: #c799a6;
 $nav-link: white;
 
@@ -46,6 +46,8 @@ $nav-link: white;
 @function shade($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
+
+// @function burn($)
 
 
 /* ---------------------------SCROLL BAR */
@@ -138,8 +140,8 @@ h1 {
 
 @mixin route-placeholder {
     display: flex;
-    height: 80vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     flex-grow: 1;
