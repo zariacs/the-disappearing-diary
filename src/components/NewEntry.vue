@@ -114,7 +114,7 @@
         </div>
 
         <div class="button-container">
-            <a class="single-button" id="conclude-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <a class="single-button" id="conclude-button" >
                 <button class="conclude-button" :class="{ 'glass-button': zenMode}">Conclude</button>
             </a>   
             <a class="single-button" id="destroy-button" @click="convertEntryToImage()">
