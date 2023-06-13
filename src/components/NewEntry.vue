@@ -219,9 +219,9 @@
 .writing-section {
 
     &.punch {
-        -webkit-mask: radial-gradient(300px at 700px 350px, transparent 80%, black);
-        mask: radial-gradient(300px at 700px 350px, transparent 80%, black);
-        background: radial-gradient(circle at 700px 350px, transparent 80%, black);
+        -webkit-mask: radial-gradient(300px at 700px 350px, transparent 90%, black);
+        mask: radial-gradient(300px at 700px 350px, transparent 90%, black);
+        background: radial-gradient(circle at 700px 350px, transparent 90%, black);
     }
 
     &.punch2 {
