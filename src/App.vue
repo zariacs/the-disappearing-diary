@@ -132,7 +132,7 @@
         text-decoration: none;
         color: #c799a6;
         letter-spacing: 0.15rem;
-        font-weight: 400;
+        font-weight: 600;
 
         border-radius: 10px;
         padding: 1rem;
