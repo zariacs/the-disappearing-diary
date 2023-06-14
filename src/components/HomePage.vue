@@ -44,7 +44,7 @@
         font-weight:800;
         letter-spacing: 0.4rem;
         font-size: 2rem;
-        text-shadow: 0px 1px 10px rgba(172, 137, 255, 0.8);
+        text-shadow: 0px 1px 10px main.$light-blue;
         text-align: center;
 
         @media only screen and (max-width: 720px) {
