@@ -22,7 +22,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'journal',
-      component: NewEntryView
+      component: HomePageView
     },
     {
       path: '/home',
