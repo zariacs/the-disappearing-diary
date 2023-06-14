@@ -193,29 +193,23 @@
 
     .single-button {
         flex: 1;
-
-        color: white;
-        font-weight:600;
-        font-size:1rem;
-        letter-spacing: 0.15rem;
-
         .conclude-button {
             @include main.button();
             height: 100%; 
-    width: 100%;
-
+            width: 100%;
+            
             &:hover {
                 background: main.$default-button-color;
             }
         }
         .destroy-button {
             @include main.button(main.$hot-pink);
+            height: 100%; 
+            width: 100%;
 
             &:hover {
                 background: main.$hot-pink;
             }
-            // @include main.button(#ee4266);
-            // @include main.button(#e43f6f);
         }
 
         .glass-button {
@@ -223,7 +217,7 @@
             border-radius: 10px;
             transition: 0.7s ease-out;
             height: 100%; 
-    width: 100%;
+            width: 100%;
 
             &:hover {
                 box-sizing: border-box;
