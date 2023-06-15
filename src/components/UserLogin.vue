@@ -13,8 +13,8 @@
             </button> -->
             <a class="forgot-password">Forgot password?</a>
             <div class="options">
-                <button>Sign In</button>
-                <button>Create Account</button>
+                <button @click="$router.push('write')">Sign In</button>
+                <button @click="$router.push('write')">Create Account</button>
 
             </div>
         </div>
