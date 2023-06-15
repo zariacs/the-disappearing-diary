@@ -1,7 +1,7 @@
 <template>
     <div class="outer-container">
         <div class="container">
-            <h2>Ready to destroy your journal?</h2>
+            <h2>Ready to open your journal?</h2>
             <div class="options">
                 <button @click="$router.push('write')">Write</button>
                 <span class="spacer"></span>
