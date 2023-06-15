@@ -84,7 +84,7 @@ button {
     cursor: pointer;
 }
 
-*:not(h1) {
+*:not(h1, span) {
     // the raleway font flashes for the site title before switching to amatic
 	margin: 0;
 	padding: 0;
