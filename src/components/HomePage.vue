@@ -28,8 +28,8 @@
     width: 100%;
 }
 .container {
-    height: 70%;
-    width: 80%;
+    height: 80%;
+    width: 90%;
     padding: 5rem;
 
     @include main.glass();
