@@ -4,7 +4,7 @@ I want to write journal entries without the risk of other people being able to s
 
 This is a work in progress. Began May 2023.
 
-Deployed on <a href="https://destroy-my-journal.netlify.app/">Netlify</a>
+Deployed on <a href="https://thedisappearingdiary.netlify.app/">Netlify</a>
 
 <!-- ## Recommended IDE Setup
 
