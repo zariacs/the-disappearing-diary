@@ -84,7 +84,7 @@
                 img.src = dataUrl;
                 innerNode.remove();
                 node.style.backgroundImage = "url('" + dataUrl.replace(/(\r\n|\n|\r)/gm, "") + "')" // removes line breaks in data url
-                node.onclick = function(event) {
+                node.onclick = function() { //add event as a function parameter when ready to mess with the classes
                     node.classList.add("punch");
                     // var containerRectangle = event.currentTarget.getBoundingClientRect();
                     // var x = event.clientX - containerRectangle.left;
@@ -114,8 +114,8 @@
         </div>
 
         <div class="button-container">
-            <a class="single-button" id="conclude-button" >
-                <button class="conclude-button" :class="{ 'glass-button': zenMode}">Conclude</button>
+            <a class="single-button" id="save-button" >
+                <button class="save-button" :class="{ 'glass-button': zenMode}">Save</button>
             </a>   
             <a class="single-button" id="destroy-button" @click="convertEntryToImage()">
                 <button class="destroy-button" :class="{ 'glass-button': zenMode}">Destroy</button>
@@ -193,7 +193,7 @@
 
     .single-button {
         flex: 1;
-        .conclude-button {
+        .save-button {
             @include main.button();
             height: 100%; 
             width: 100%;
