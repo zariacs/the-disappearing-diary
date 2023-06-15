@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="container">
+  <div class="container" v-cloak>
     <a href="https://www.linkedin.com/in/zaria-chen-shui/" target="_blank">
       <img class="linkedin-profile" src="../assets/images/linkedin-profile.png" alt="" >
     <h2>Meet the Developer</h2>

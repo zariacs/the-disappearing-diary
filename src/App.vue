@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
     <div class="stationary-background"></div>
     <div class="slider-container">
       <div class="slider-image"></div>
