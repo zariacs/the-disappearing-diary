@@ -20,7 +20,7 @@
             <p>
                 This project is an experiment of supplementalism. In the same way that software supplements the physical world, so too can the real world supplement software. What is missing from software? What can be added? And how can people’s lives be richer instead of bland-er, experiential instead of exclusively functional?
             </p>
-            <br><br>
+            <br><br><br><br>
         </div>
     </div>
 </template>
@@ -31,6 +31,10 @@
 
 .outer-container {
     @include main.glass();
+    background: #7947bf15;
+    background: #bf479715;
+
+
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -50,13 +54,14 @@
 
         h2 {
             padding-bottom: 4rem;
-            font-size: 3rem;
+            font-size: 5rem;
             font-weight: 800;
             color: main.$blue;
+            letter-spacing: 0.5rem;
             text-align: center;
             text-shadow: 0px 1px 5px main.$light-blue;
             text-transform: uppercase;
-
+            line-height: 6rem;
 
         }
 
@@ -65,6 +70,8 @@
             font-size: 1.7rem;
             color: main.$blue;
             text-transform: uppercase;
+            text-align: center;
+            line-height: 6rem;
 
         }
 
@@ -82,14 +89,7 @@
             
         }
 
-        .info {
-            button {
-                span {
-                    color: white;
-                }
-            }
-        }
-
+        
 
 
     }

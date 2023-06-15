@@ -18,12 +18,16 @@
                 <span class="material-symbols-rounded">home</span>
                 <span class="text">Home</span>
               </router-link>
+              <router-link class="button" to="/write">
+                <span class="material-symbols-rounded">edit</span>
+                <span class="text">Write</span>
+              </router-link>
               <router-link class="button" to="/login">
-                <span class="material-symbols-rounded">visibility</span>
-                <span class="text">Log In</span>
+                <span class="material-symbols-rounded">person</span>
+                <span class="text">Sign In</span>
               </router-link>
               <router-link class="button" to="/wiki">
-                <span class="material-symbols-rounded">group</span>
+                <span class="material-symbols-rounded">info</span>
                 <span class="text">Project Wiki</span>
               </router-link>
               <router-link class="button" to="/contact">
@@ -109,6 +113,7 @@
   .nav-container {
     @include main.glass();
     background-color: none;
+    // background: #bf479715;
     backdrop-filter: none;
     padding: 2rem;
     padding-top: 10rem;

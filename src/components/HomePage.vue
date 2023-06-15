@@ -35,6 +35,8 @@
     @include main.glass();
     background: transparent;
     background: #7947bf15;
+    background: #bf479715;
+
     -webkit-backdrop-filter: blur(0);
     backdrop-filter: blur(2px);
 
@@ -46,10 +48,10 @@
 
     h2 {
         color: white;
-        font-weight:800;
-        letter-spacing: 0.4rem;
+        font-weight:700;
+        letter-spacing: 0.3rem;
         font-size: 2rem;
-        text-shadow: 0px 1px 5px main.$light-blue;
+        text-shadow: 0px 1px 10px main.$light-blue;
         text-align: center;
 
         @media only screen and (max-width: 720px) {
@@ -60,7 +62,7 @@
     .options {
         display: flex;
         flex-direction: row;
-        padding-top: 3rem;
+        padding-top: 4rem;
         padding-left: 5rem;
         padding-right: 5rem;
 

@@ -321,6 +321,8 @@ aside {
 
             /* glass */
             @include main.glass;
+    // background: #bf479715;
+            
 
             &:last-child {
                 margin-bottom: 5px;
