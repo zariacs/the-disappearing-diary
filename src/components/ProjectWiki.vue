@@ -82,6 +82,14 @@
             
         }
 
+        .info {
+            button {
+                span {
+                    color: white;
+                }
+            }
+        }
+
 
 
     }

@@ -7,6 +7,11 @@
                 <span class="spacer"></span>
                 <button @click="$router.push('login')">Sign In</button>
             </div>
+            <div class="info">
+                <button @click="$router.push('wiki')">
+                    <span class="material-symbols-rounded">info</span>
+                </button>
+            </div>
         </div>
     </div>
 </template>
@@ -29,7 +34,7 @@
 
     @include main.glass();
     background: transparent;
-    background: #ffffff05;
+    background: #7947bf15;
     -webkit-backdrop-filter: blur(0);
     backdrop-filter: blur(2px);
 
@@ -44,7 +49,7 @@
         font-weight:800;
         letter-spacing: 0.4rem;
         font-size: 2rem;
-        text-shadow: 0px 1px 10px main.$light-blue;
+        text-shadow: 0px 1px 5px main.$light-blue;
         text-align: center;
 
         @media only screen and (max-width: 720px) {
@@ -78,8 +83,20 @@
         }
     }
 
-
-
+    .info {
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+        button {
+            color: white;
+            text-transform:capitalize;
+            
+            span {
+                // change info text color here
+                // color: main.$mauve;
+                font-size: 1.7rem;
+            }         
+        }
+    }
 }
-
 </style>
