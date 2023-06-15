@@ -83,11 +83,6 @@
     grid-template-columns: 3vw 5vw 14.5vw 1fr 1fr 2vw;
     transition: 0.1s ease-out;    
   }
-
-  // grid-template-areas:
-  //     "left-spacer nav-toggle header header header right-spacer"
-  //     "left-spacer content right-spacer"
-  //     "footer footer footer footer footer footer";
   
   .nav-toggle-wrap {
     @include main.vertical-center();
@@ -113,7 +108,6 @@
   .nav-container {
     @include main.glass();
     background-color: none;
-    // background: #bf479715;
     backdrop-filter: none;
     padding: 2rem;
     padding-top: 10rem;
@@ -136,7 +130,7 @@
       .button {
         text-decoration: none;
         color: #c799a6;
-        letter-spacing: 0.15rem;
+        letter-spacing: 0.2rem;
         font-weight: 600;
 
         border-radius: 10px;
@@ -151,15 +145,16 @@
         &:hover, &.router-link-exact-active {
           // @include main.glass();
           background: rgba(255, 255, 255, 0.1);
+          background: #ffaaaa10;
           border-radius: 14px;
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           border: 1px solid rgba(255, 255, 255, 0.3);
-          backdrop-filter: blur(5px);
+          backdrop-filter: blur(1px);
           -webkit-backdrop-filter: blur(5px);
         }
 
         .material-symbols-rounded {
-          margin-right: 2rem;
+          margin-right: 3rem;
         }
       }  
     }
