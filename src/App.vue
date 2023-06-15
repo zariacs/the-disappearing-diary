@@ -139,7 +139,7 @@
         align-items: center;
         margin-bottom: 1rem;
         border: 1px solid transparent; // without this the buttons jump a bit on hover due to the addition of the 1px glass border
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-transform: uppercase;
 
         &:hover, &.router-link-exact-active {
